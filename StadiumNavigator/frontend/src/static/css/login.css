@@ -1,0 +1,23 @@
+/*** login ***/
+
+/* login container */
+.loginContainer {
+    background-color: var(--primary-color);
+    min-height: auto;
+}
+
+.loginContainer > p {
+    color: white;
+    font-size: 0.9em;
+    text-align: center;
+    padding: 10px;
+}
+
+/* prompt */
+#loginPrompt {
+    font-size: 0.9em;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px var(--shadow-color);
+    margin: 10px 10px 25px 10px;
+}

@@ -1,0 +1,50 @@
+/*** events ***/
+
+.events {
+    font-family: "Roboto";
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.events > div {
+    border: 1px solid var( --border-color );
+    border-radius: 5px;
+    padding: 5px 10px;
+}
+
+.events > div:hover {
+    border-color: var( --highlight-color );
+}
+
+.events > div:hover > label {
+    color: var( --highlight-color );
+}
+
+.events > div > input[type=radio] {
+    display: none;
+}
+
+.events > div > div {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px 10px 0px 10px;
+    font-size: 0.8em;
+}
+
+.events > div > input[type=radio]:checked ~ div {
+    display: flex;
+}
+
+.events > div > label {
+    font-size: 1em;
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+}
+
+.events > div > div > a {
+    justify-content: end;
+}

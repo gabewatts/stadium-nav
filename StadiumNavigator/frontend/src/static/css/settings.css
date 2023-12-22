@@ -1,0 +1,14 @@
+#settingsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#settingsContainer > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+#settingsContainer > hr {
+    border-color: var( --border-color );
+}

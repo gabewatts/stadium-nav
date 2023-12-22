@@ -1,0 +1,442 @@
+/*** common css styling across all pages ***/
+
+/** variables **/
+:root {
+    --primary-color: #2b78e4;
+    --secondary-color: #81c2c7;
+    --text-color: #000000;
+    --background-color: #81c2c7;
+    --forefront-color: #ffffff;
+    --accent-color: #81c2c7;
+    --highlight-color: #2b78e4;
+    --primary-button-color: #2b78e4;
+    --secondary-button-color: #ffffff;
+    --border-color: #ffffff;
+    --shadow-color: #646464;
+    --link-hover-color: #e6e6e6;
+    --divider-color: #b9b9b9;
+}
+
+/** common formatting **/
+h1, p, a, span, label {
+    font-family: "Roboto";
+}
+
+body, h1, p, hr {
+    margin: 0px;
+}
+
+/** tags **/
+body {
+    position: relative;
+    background-color: var( --background-color );
+    color: var( --text-color );
+    transition: margin-left 0.7s ease;
+}
+
+/* page content */
+main {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+/** classes **/
+
+/* sections of main content */
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: var( --forefront-color );
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px var( --shadow-color );
+    padding: 10px;
+    overflow-y: auto;
+}
+
+.container > h1 {
+    font-size: 1.5em;
+    text-align: center;
+}
+
+.container > h2 {
+    font-size: 0.9em;
+}
+
+.blankContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* buttons */
+.button {
+    height: 30px;
+    font-size: 1.1em;
+    box-shadow: 2px 2px 5px black;
+    padding: 0px 10px;
+    border: 1px solid var( --primary-button-color );
+}
+
+.button:active {
+    box-shadow: 2px 2px 2px black inset;
+}
+
+.primaryColors {
+    background-color: var( --primary-button-color );
+    color: var( --secondary-button-color );
+}
+
+.secondaryColors {
+    background-color: var( --secondary-button-color );
+    color: var( --primary-button-color );
+}
+
+.round {
+    border-radius: 10px;
+}
+
+/* override effects */
+.none {
+    display: none !important;
+}
+
+.noScroll {
+    overflow: hidden !important;
+}
+
+.translateToOrigin {
+    translate: 0% 0% !important;
+}
+
+.dimBackground {
+    translate: 0% !important;
+    opacity: 0.7 !important;
+}
+
+/* sidebar */
+.navLink {
+    display: flex;
+    height: 100%;
+    font-size: 0.8em;
+    justify-content: space-between;
+    border-top: 1px solid var( --divider-color );
+}
+
+.navLink:hover {
+    background-color: var( --link-hover-color );
+}
+
+.navLink:hover > a {
+    padding-left: 15px;
+}
+
+.navLink img {
+    height: 20px;
+    width: 20px;
+}
+
+.navLink > img {
+    padding: 5px 10px 5px 5px;
+    cursor: pointer;
+}
+
+.navLink > a {
+    gap: 5px;
+    width: 100%;    
+    justify-content: left;
+    padding: 5px 0px 5px 10px;
+    transition: padding-left 0.3s ease;
+    color: var( --text-color );
+}
+
+/** ids **/
+#logo {
+    display: flex;
+    width: 100%;
+    height: 150px;
+}
+
+#logo > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* nav bar */
+#navbar {
+    position: sticky;
+    top: 0px;
+    height: 40px;
+    width: 100%;
+    background-color: var( --forefront-color );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 0px 10px;
+    border-top: 1px solid black;
+    border-bottom: 2px solid black;
+    box-shadow: 0px 2px 5px var( --shadow-color );
+    z-index: 96;
+}
+
+#navbar h1 {
+    font-size: 0.9em;
+}
+
+#navbar img {
+    height: 25px;
+    width: 25px;
+}
+
+/* sidebar */
+#hamburger {
+    cursor: pointer;
+}
+
+#sidebar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100vh;
+    width: min(75%, 400px);
+    background-color: var( --forefront-color );
+    border-right: 1px solid black;
+    z-index: 99;
+    translate: -100%;
+    transition: translate 0.7s ease;
+    overflow-y: auto;
+}
+
+#sidebar > header {
+    height: 160px;
+    width: 100%;
+}
+
+#sidebar > header > img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: top;
+}
+
+/* sidebar top buttons */
+#topButtons {
+    display: flex;
+    gap: 10px;
+    margin: 0px 10px;
+    translate: 0% -50%;
+}
+
+#topButtons > a, #topButtons > button {
+    font-size: 0.8em;
+    flex: 1;
+}
+
+/* nav links */
+#links input {
+    display: none;
+}
+
+#links > div {
+    border-bottom: 2px solid black;
+    padding: 5px 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#links > div > label {
+    font: bold 0.9em "Roboto";
+    color: var( --primary-color );
+    height: 20px;
+}
+
+#links > div > select {
+    flex: 1;
+    background-color: var( --secondary-button-color );
+    color: var( --text-color );
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 0.7em;
+    padding: 5px;
+    cursor: pointer;
+}
+
+#links > section {
+    border-bottom: 2px solid black;
+}
+
+#links > section > label {
+    display: flex;
+    align-items: center;
+    height: 40px;
+    font: bold 1.2em "Roboto";
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+#links > section > label:hover {
+    background-color: var( --primary-color );
+}
+
+#links input ~ label + div {
+    display: none;
+}
+
+#links input:checked ~ label + div {
+    display: block;
+}
+
+/* search */
+#searchButton {
+    cursor: pointer;
+}
+
+#searchBar {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-color: var( --accent-color );
+    box-sizing: border-box;
+    padding: 10px;
+    border-bottom: 1px solid black;
+    z-index: 98;
+    translate: 0% -100%;
+    transition: translate 0.5s ease, left 0.7s ease;
+}
+
+#searchBar > label {
+    display: flex;
+    align-items: center;
+}
+
+#searchBar img {
+    width: 30px;
+    height: 30px;
+}
+
+#searchBar > form > input {
+    flex: 1;
+    min-width: 20px;
+    height: 40px;
+    font-size: 1.2em;
+    padding: 0px 15px;
+    border: none;
+    border-radius: 20px;
+}
+
+/* dim background */
+#background {
+    position: fixed;
+    top: 0px;
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+    opacity: 0;
+    z-index: 97;
+    translate: 100%;
+    transition: opacity 0.7s ease;
+}
+
+/* X-Small devices are the default */
+
+/* Small devices */
+@media ( min-width: 576px ) {
+
+    .container > h1 {
+        font-size: 2em;
+    }
+
+    main {
+        align-items: center;
+    }
+
+    main fieldset {
+        margin-left: 10%;
+        margin-right: 10%;
+    }
+
+    .mediaButton {
+        width: 40%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .container, .blankContainer {
+        max-width: none;
+        width: 500px;
+    }
+
+    #searchBar > input {
+        max-width: 40%;
+    }
+}
+
+/* Medium devices */
+@media ( min-width: 768px ) {
+    .container, .blankContainer {
+        width: 500px;
+    }
+}
+
+/* Large devices */
+@media ( min-width: 992px ) {
+    body {
+        margin-left: 400px;
+    }
+
+    #hamburger {
+        visibility: hidden;
+    }
+
+    #sidebar {
+        translate: 0%;
+        box-shadow: 5px 0px 10px var( --shadow-color );
+    }
+
+    #searchBar {
+        left: 400px;
+    }
+
+    .container, .blankContainer {
+        width: 500px;
+    }
+}
+
+/* X-Large devices */
+@media ( min-width: 1200px ) {
+    .container, .blankContainer {
+        width: 600px;
+    }
+}
+
+/* XX-Large devices */
+@media ( min-width: 1400px ) {
+    .container, .blankContainer {
+        width: 700px;
+    }
+}

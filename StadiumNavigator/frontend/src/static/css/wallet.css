@@ -1,0 +1,64 @@
+#wallet {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#wallet > section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    background-color: var( --forefront-color );
+    border: 2px solid black;
+    border-radius: 5px;
+    box-shadow: 2px 2px 10px var( --shadow-color );
+}
+
+#wallet > section:hover {
+    border: 2px solid var( --primary-color );
+}
+
+#wallet > section:hover h3 {
+    color: var( --primary-color );
+}
+
+#wallet > section img {
+    height: 20px;
+    width: 20px;
+}
+
+#wallet > section > label {
+    display: flex;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#wallet > section > label > h3 {
+    margin: 0px;
+}
+
+#wallet > section > div {
+    display: none;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+
+#wallet > section > input[type=radio] {
+    display: none;
+}
+
+#wallet > section > input[type=radio]:checked ~ div {
+    display: flex;
+}
+
+#wallet > section > input[type=radio]:checked ~ label {
+    color: var( --primary-color );
+}
+
+#wallet > section > div > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+}

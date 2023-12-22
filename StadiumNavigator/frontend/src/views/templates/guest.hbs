@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title -->
+    <title>{{title}}</title>
+    <!-- common links -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
+    <link rel="stylesheet" href="./css/login.css">
+    <!-- page specific links -->
+    <link rel="stylesheet" href="./css/events.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+    <!-- installable app -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#81c2c7">
+    <meta name="msapplication-TileColor" content="#81c2c7">
+    <meta name="theme-color" content="#202124">
+    <script src="./js/serviceWorker.js" async defer></script>
+    <!-- common scripts -->
+    <script src="./js/guest.js" type="module"></script>
+    <script src="./js/nav.js" type="module"></script>
+    <!-- page specific scripts -->
+    <script src="./js/guestUpcomingEvents.js" type="module"></script>
+</head>
+<body>
+    <script>0</script>
+    {{! logo header }}
+    {{> logo}}
+    {{! navigation bar }}
+    {{> guest_navbar}}
+    <!-- sidebar -->
+    <aside id="sidebar" class="nav">
+        {{! logo header }}
+        {{> logo}}
+        <!-- top buttons -->
+        <div id="topButtons">
+            <a class="button round secondaryColors" href="./sign-in">Sign In</a>
+            <a class="button round primaryColors" href="./sign-up">Sign Up</a>
+        </div>
+        {{! login prompt + guest nav }}
+        {{> guest_sidebar}}
+    </aside>
+    {{! search screen + dimmer }}
+    {{> search}}
+    <!-- page content -->
+    <main>
+        <!-- sign in prompt -->
+        <section class="container loginContainer">
+            <!-- sign in link -->
+            <a class="button secondaryColors mediaButton" href="./sign-in">Sign In</a>
+            <!-- slogan -->
+            <p>Sign in to take advantage of the power of MyStadiumNavigator!</p>
+        </section>
+        <!-- upcoming events -->
+        <section class="container">
+            <h1>Upcoming Events</h1>
+            <!-- content created with csr -->
+            <div id="upcomingEvents" class="events"></div>
+        </section>
+    </main>
+</body>
+</html>

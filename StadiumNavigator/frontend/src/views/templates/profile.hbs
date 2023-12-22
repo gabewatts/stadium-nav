@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title -->
+    <title>{{title}}</title>
+    <!-- common links -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- page specific links -->
+    <link rel="stylesheet" href="./css/form.css">
+    <link rel="stylesheet" href="./css/profile.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./icons/favicon.ico">
+    <!-- installable app -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#81c2c7">
+    <meta name="msapplication-TileColor" content="#81c2c7">
+    <meta name="theme-color" content="#202124">
+    <script src="./js/serviceWorker.js" async defer></script>
+    <!-- common scripts -->
+    <script src="./js/common.js" type="module"></script>
+    <script src="./js/nav.js" type="module"></script>
+    <!-- page specific scripts -->
+    <script src="./js/profile.js" type="module"></script>
+</head>
+<body>
+    <script>0</script>
+    {{! navigation bar }}
+    {{> navbar}}
+    {{! sidebar }}
+    {{> sidebar}}
+    {{! search screen + dimmer }}
+    {{> search}}
+    <!-- page content -->
+    <main>
+        <!-- profile -->
+        <section class="container">
+            <form class="profile form">
+                <div id="preview" class="profile"></div>
+                <input type="text" name="avatar" class="profile none">
+                <button type="button" id="randomizer" class="profile none button primaryColors mediaButton">Randomize!</button>
+                <fieldset class="profile" disabled>
+                    <legend>First Name</legend>
+                    <input type="text" name="firstName" class="profile" placeholder="First Name">
+                </fieldset>
+                <fieldset class="profile" disabled>
+                    <legend>Last Name</legend>
+                    <input type="text" name="lastName" class="profile" placeholder="Last Name">
+                </fieldset>
+                <fieldset class="profile" disabled>
+                    <legend>Username</legend>
+                    <input type="text" name="username" class="profile" placeholder="Username">
+                </fieldset>
+                <fieldset class="profile none">
+                    <legend>Password</legend>
+                    <input type="password" name="password" class="profile" placeholder="Password">
+                </fieldset>
+                <fieldset class="profile none">
+                    <legend>New Password</legend>
+                    <input type="password" name="update" class="profile" placeholder="New Password">
+                </fieldset>
+                <fieldset class="profile none">
+                    <legend>Confirm New Password</legend>
+                    <input type="password" name="confirm" class="profile" placeholder="Confirm New Password">
+                </fieldset>
+                <div class="profile none feedback"></div>
+                <button type="submit" class="profile none button primaryColors mediaButton">Save</button>
+                <button type="button" class="profile button primaryColors mediaButton">Edit Profile</button>
+                <button type="button" class="profile button secondaryColors mediaButton">Change Password</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>

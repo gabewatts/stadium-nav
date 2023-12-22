@@ -1,0 +1,25 @@
+#titleID {
+    text-align: center;
+}
+#messageID {
+    text-align: center;
+}
+
+#mapID {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.stars {
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+#mapID img {
+    width: 100%;
+}

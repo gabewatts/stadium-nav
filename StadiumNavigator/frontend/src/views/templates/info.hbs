@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- metadata -->
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- page title -->
+    <title>{{title}}</title>
+    <!-- common links -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="./css/app.css">
+    <!-- favicon -->
+    <link rel="icon" type="image/x-icon" href="./images/icons8-stadium-16.png">
+    <!-- installable app -->
+    <link rel="apple-touch-icon" sizes="180x180" href="./icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./icons/favicon-16x16.png">
+    <link rel="manifest" href="./manifest.webmanifest" crossorigin="use-credentials">
+    <link rel="mask-icon" href="./icons/safari-pinned-tab.svg" color="#81c2c7">
+    <meta name="msapplication-TileColor" content="#81c2c7">
+    <meta name="theme-color" content="#202124">
+    <script src="./js/serviceWorker.js" async defer></script>
+    <!-- common scripts -->
+    <script src="./js/common.js" type="module"></script>
+    <script src="./js/nav.js" type="module"></script>
+    <!-- page specific scripts -->
+    <script src="./js/info.js" type="module"></script>
+</head>
+<body>
+    <script>0</script>
+    {{! navigation bar }}
+    {{> navbar}}
+    {{! sidebar }}
+    {{> sidebar}}
+    {{! search screen + dimmer }}
+    {{> search}}
+    <!-- page content -->
+    <main>
+        <!-- page specific content -->
+        <!-- style this content with page specific css/js -->
+        <!-- section 1 -->
+        <section class="container">
+            <h1>Stadium Information</h1>
+            <div id="info"></div>
+        </section>
+    </main>
+</body>
+</html>
