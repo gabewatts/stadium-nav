@@ -1,8 +1,4 @@
-# My Stadium Navigator
-
-**Group N**: *Final Project* - 12/01/23
-
-## MyStadiumNav  
+# Stadium Navigator
 
 The target audience of this app are event-goes who would like their information saved in one place and offline.  
 
